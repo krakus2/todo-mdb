@@ -1,0 +1,95 @@
+.container{
+  border-radius: 2px;
+  box-shadow: 0 3px 6px #777;
+  margin-top: 10px;
+  max-height: 1000px;
+}
+
+.buttonRow{
+  padding: 10px;
+  background-color: var(--grey);
+  border-radius: 2px 2px 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 280px;
+}
+
+.todoRow-enter{
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-30%);
+  max-height: 0;
+  transition: all 0.3s;
+}
+
+.todoRow-enter-active{
+  visibility: visible;
+  opacity: 1;
+  max-height: 40px;
+  transform: translateX(0);
+}
+
+.todoRow-leave{
+  visibility: visible;
+  opacity: 1;
+  max-height: 40px;
+  transition: all 0.3s;
+  transform: translateX(0);
+}
+
+.todoRow-leave-active{
+  visibility: hidden;
+  padding: 0;
+  opacity: 0;
+  max-height: 0;
+  transform: translateX(30%);
+}
+
+.buttonRow__button {
+  position: relative;
+  display: block;
+  padding: 0;
+  width: 80px;
+  height: 35px;
+  overflow: hidden;
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  background-color: var(--blueH);
+  color: #ecf0f1;
+  transition: background-color 0.3s;
+}
+
+.buttonRow__button:hover {
+  background-color: var(--darkerBlueH);
+  cursor: pointer;
+}
+
+.buttonRow__button > * {
+  position: relative;
+}
+
+.buttonRow__button:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0;
+  padding-top: 0;
+  border-radius: 100%;
+  background-color: var(--theDarkestBlueH);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.buttonRow__button:active:before {
+  width: 140%;
+  padding-top: 140%;
+  transition: width 0.2s ease-out, padding-top 0.2s ease-out;
+}

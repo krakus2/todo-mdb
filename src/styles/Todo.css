@@ -1,0 +1,17 @@
+.todo{
+  /*border-bottom: 1px solid var(--grey);*/
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.todo:after{
+  content: '';
+  height: auto;
+  border-bottom: 1px solid var(--grey);
+
+}
+.todo__span{
+  margin: 10px 17px;
+}
