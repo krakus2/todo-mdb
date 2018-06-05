@@ -6,7 +6,7 @@
 }
 
 .buttonRow{
-  padding: 10px;
+  padding: 15px 10px;
   background-color: var(--grey);
   border-radius: 2px 2px 0 0;
   display: flex;
