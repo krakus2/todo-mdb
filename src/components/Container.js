@@ -10,8 +10,6 @@ class Container extends Component {
 
 addTodo = () => {
   const { counter } = this.state
-  //console.log([...Array(10)])
-  //[...Array(10)].map((elem, i) => console.log(i))
   this.setState({ counter: counter + 1 })
 }
 
@@ -52,9 +50,9 @@ clearTodo = () => {
           component='div'
           transitionName='todoRow'
         >
-          {[...Array(counter)].map((elem, i) =>
-            <Todo key={i} iter={i} />
-          )}
+          {
+            [...Array(counter)].map((elem, i) => <Todo key={i} iter={i+1} /> )
+          }
         </CSSTransitionGroup>
       </div>
     );
