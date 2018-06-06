@@ -1,8 +1,7 @@
 .container{
   border-radius: 2px;
   box-shadow: 0 3px 6px #777;
-  margin-top: 10px;
-  max-height: 1000px;
+  margin: 10px 0;
 }
 
 .buttonRow{
